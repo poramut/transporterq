@@ -1,0 +1,23 @@
+<?php
+require 'connect.php';
+$array = array();
+
+if($_SERVER['REQUEST_METHOD']=='POST'){
+  $uname = $_POST['uName'];
+  $pword = $_POST['pWord'];
+
+  $Sql = "SELECT login.username,login.password FROM login WHERE username = '$uName' AND '$pWord'";
+  $meQuery = mysql_query($Sql);
+  while ($Result = mysql_fetch_assoc($meQuery)) {
+      array_push($array,
+        array('Scc'=>"true")
+      );
+  }
+}else {
+  array_push($array,
+    array('Scc'=>"false")
+  );
+}
+echo json_encode(array("result"=>$array));
+mysql_close($meConnect)
+ ?>
