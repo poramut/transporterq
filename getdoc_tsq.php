@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $DueDate = $Result["DueDate"];
     $xName = $Result["xName"];
     $IsSend = $Result["IsSend"];
-    $detail = $Result["deatil"];
+    $detail = $Result["detail"];
     $transportID = $Result["transportID"];
       array_push($array,
         array('Scc'=>"true",
