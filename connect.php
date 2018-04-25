@@ -6,7 +6,7 @@
 
 $cfHost = "localhost";
 $cfUser = "root";
-$cfPassword = "1234";
+$cfPassword = "";
 $cfDatabase = "phc";
 
 // A$192dijd
